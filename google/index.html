@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Google</title>
+		<link type="image/png" rel="icon" href="images/icon.png">
+		
+		<style>
+			body{
+				margin:0;
+				font-family:arial;
+				font-size:14px;
+			}
+			
+			#header{
+				text-align:right;
+				margin:0;
+			}
+			
+			#logo{
+				margin-top: 110px;
+				margin-left: auto;
+				margin-right:auto;
+				display: block;
+				width:272px; 
+				height:92px;
+			}
+			
+			#searchbox{
+				margin-top:30px;
+				margin-left: auto;
+				margin-right:auto;
+				display: block;
+				width:400pt;
+				height:33pt;
+				border-radius: 25px;
+				border:solid 1px #DFE1E5;
+			}
+			
+			#searchbox:hover{
+				
+				box-shadow:0 0 10px #DFE1E5;
+			}
+			
+			#textbox{
+				width:80%;
+				padding:0;
+				height:100%;
+				border:none;
+			}
+			
+			.icon{
+				width:15px;
+				height:15px;
+				fill:#9AA0A6;
+				text-align:center;
+				margin:0 10px 0 15px ;
+			}
+		
+			.section{
+				margin-top:27px;
+				text-align:center;
+			}
+			
+			.section p{
+				color: #4F4F4F;
+				font-size:14px;
+				padding:10px;
+			}
+			
+			.section button{
+				color:#5F6368;
+				background-color:#F3F3F3;
+				border:none;
+				border-radius:4px;
+				padding:10px 18px 10px 18px;
+				margin:3px;
+			}
+			
+			.section button:hover{
+				box-shadow:0 0 1px #5F6368;
+			}
+			
+			.section a{
+				text-decoration:none;
+			}
+			
+			#country{
+				font-size:14px;
+				padding-left:20px;
+				border-width: 1px 0 1px 0;
+				border-style: solid;
+				border-color: #E4E4E4;
+				text-align: left;
+				margin-bottom:10px;
+			}
+			
+			#footer{
+				padding-bottom:10px;
+				width:100%;
+				position:fixed;
+				bottom:0;
+				left:0;
+				background-color:#F2F2F2;
+			}
+			
+			#footer a:hover{
+				text-decoration:underline;
+			}
+			
+			#footer a,p{
+				color:#676A6F;
+				text-decoration:none;
+				padding:0 15px 0 15px;
+			}
+			
+			#footer .last{
+				
+				padding: 0 20px 5px 20px;
+			}
+			
+			#header{
+				padding:15px 25px 0 0;
+			}
+			
+			#header a{
+				color:#3C3C3C;
+				font-size:13px;
+				padding:5px;
+				text-decoration: none;
+			}
+			
+			#header a:hover{
+				text-decoration: underline;
+			}
+			
+			#header button{
+				
+				color:#FFFFFF;
+				background-color: #4485F5;
+				padding:8px 15px 8px 15px;
+				border:none;
+				border-radius: 2px;
+				font-weight:bold;
+				font-size:12px;	
+			}
+			
+			.setting{
+				float: right;
+				
+			}
+			
+			@media only screen and (max-width: 800px) {
+			#footer{		
+				text-align: center;
+				}
+				
+			.setting{
+				float:none;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="header">
+			
+			<a href="#">Gmail</a>
+			<a href="#">Image</a>
+			<button>Sign in</button>
+			
+		</div>
+		
+		<img alt="Google" id="logo" src="images/googlelogo.png">
+		<div  id="searchbox">
+			<svg focusable="false" viewBox="1 1 20 20" class="icon">
+				<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+				</path>
+			</svg>
+			
+			<input id="textbox" type="text">
+		</div>
+		
+		<div class="section">
+			<button>Google Search</button>
+			<button>I'm Feeling Lucky</button>
+			
+			<p>Google offered in: <a href="#">हिन्दी</a>&nbsp; <a href="#">سنڌي</a>&nbsp; <a href="#">پښتو</a> &nbsp;<a href="#">اردو</a></p>
+		</div>
+		
+		<div id="footer">
+				<div id="country"><p>Pakistan</p></div>
+				
+				<div class="setting last">
+					<a href="#">Privacy</a>
+					<a href="#">Terms</a>
+					<a href="#">Settings</a>
+				
+				</div>
+				<div class="last">
+					<a href="#">Advertising</a>
+					<a href="#">Business</a>
+					<a href="#">About</a>
+					<a href="#">How Search works</a>
+				</div>	
+			</div>
+	</body>
+</html>

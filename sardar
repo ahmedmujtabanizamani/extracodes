@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-04T20:11:48.530Z" agent="5.0 (Windows)" etag="b1PLcRs_lACaHCQiAGZj" version="15.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-04T20:12:40.970Z" agent="5.0 (Windows)" etag="bZlcDsOj4sUnx0f7o32U" version="15.6.8" type="github">
   <diagram name="Page-1" id="97916047-d0de-89f5-080d-49f4d83e522f">
     <mxGraphModel dx="1574" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -49,6 +49,9 @@
         <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-64" value="Marketing" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;fontSize=14;fontColor=#FFFFFF;fontStyle=1;strokeColor=none;fillColor=#10739E;" vertex="1" parent="1">
           <mxGeometry x="670" y="554.5" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MSsf35_Yfvc1w6-Nz9Uh-66" target="MSsf35_Yfvc1w6-Nz9Uh-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-66" value="operation" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;fontSize=14;fontColor=#FFFFFF;fontStyle=1;strokeColor=none;fillColor=#10739E;" vertex="1" parent="1">
           <mxGeometry x="875" y="554.5" width="120" height="60" as="geometry" />
         </mxCell>
@@ -78,6 +81,15 @@
         </mxCell>
         <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-78" value="customer industry" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;fontSize=14;fontColor=#FFFFFF;fontStyle=1;strokeColor=none;fillColor=#10739E;" vertex="1" parent="1">
           <mxGeometry x="670" y="834.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MSsf35_Yfvc1w6-Nz9Uh-80" target="MSsf35_Yfvc1w6-Nz9Uh-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-80" value="mine dep" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;fontSize=14;fontColor=#FFFFFF;fontStyle=1;strokeColor=none;fillColor=#10739E;" vertex="1" parent="1">
+          <mxGeometry x="875" y="694.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MSsf35_Yfvc1w6-Nz9Uh-82" value="geology dep" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;fontSize=14;fontColor=#FFFFFF;fontStyle=1;strokeColor=none;fillColor=#10739E;" vertex="1" parent="1">
+          <mxGeometry x="875" y="834.5" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

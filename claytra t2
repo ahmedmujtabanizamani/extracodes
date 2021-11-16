@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-16T19:42:08.800Z" agent="5.0 (Windows)" etag="hiidoji3KlubobnigsFj" version="15.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-16T19:53:49.061Z" agent="5.0 (Windows)" etag="CxKDofX0sXnNgqsbLMj3" version="15.7.4" type="github">
   <diagram id="S2Js6nm2CiGUD_90-e12" name="Page-1">
     <mxGraphModel dx="1102" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -23,42 +23,71 @@
         <mxCell id="ostFqjo0AkNTW5q0AOqs-3" value="&lt;div&gt;priority&lt;/div&gt;&lt;div&gt;1&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="290" y="180" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ostFqjo0AkNTW5q0AOqs-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.554;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-4" target="ostFqjo0AkNTW5q0AOqs-21">
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-7" target="ostFqjo0AkNTW5q0AOqs-29">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="710" y="260" as="targetPoint" />
+            <mxPoint x="520" y="220" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="713" y="220" />
+              <mxPoint x="510" y="225" />
+              <mxPoint x="510" y="225" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="ostFqjo0AkNTW5q0AOqs-4" value="incident.priority.1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="190" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ostFqjo0AkNTW5q0AOqs-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-7" target="ostFqjo0AkNTW5q0AOqs-4">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ostFqjo0AkNTW5q0AOqs-7" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/bitsies/128/Gun-128.png" vertex="1" parent="1">
           <mxGeometry x="430" y="196" width="48" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="ostFqjo0AkNTW5q0AOqs-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.011;entryY=0.36;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-10" target="ostFqjo0AkNTW5q0AOqs-21">
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-10" target="ostFqjo0AkNTW5q0AOqs-31">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="440" y="337" />
-              <mxPoint x="440" y="337" />
+              <mxPoint x="330" y="410" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ostFqjo0AkNTW5q0AOqs-10" value="Call meeting" style="rounded=1;fillColor=#0057D8;align=center;strokeColor=none;html=1;fontColor=#ffffff;fontSize=12;sketch=0;" vertex="1" parent="1">
-          <mxGeometry x="382" y="310" width="86" height="33" as="geometry" />
+          <mxGeometry x="287" y="347" width="86" height="33" as="geometry" />
         </mxCell>
         <mxCell id="ostFqjo0AkNTW5q0AOqs-11" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.atlassian.checkbox;fillColor=#008465;strokeColor=none;html=1;sketch=0;" vertex="1" parent="1">
           <mxGeometry x="350" y="319.5" width="14" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="ostFqjo0AkNTW5q0AOqs-21" value="&lt;div&gt;Create Meeting&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Assign Participants&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;schedule Meeting&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;get Meeting and Attach with Incident&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="610" y="333.5" width="186" height="186" as="geometry" />
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-21" target="ostFqjo0AkNTW5q0AOqs-28">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ostFqjo0AkNTW5q0AOqs-26" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/health-care-and-first-responders/64/police-white-male-coronavirus-128.png" vertex="1" parent="1">
-          <mxGeometry x="121" y="82" width="98" height="98" as="geometry" />
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-21" value="&lt;div&gt;Special Teatment&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Trigger Meeting Call&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="700" y="310" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-27" value="&#xa;&#xa;&#xa;OOB components&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="50" width="660" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-26" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/health-care-and-first-responders/64/police-white-male-coronavirus-128.png" vertex="1" parent="ostFqjo0AkNTW5q0AOqs-27">
+          <mxGeometry x="10" y="10" width="98" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-29" value="&lt;font style=&quot;font-size: 10px&quot;&gt;incident.priority.1&lt;/font&gt;" style="triangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="ostFqjo0AkNTW5q0AOqs-27">
+          <mxGeometry x="478" y="130" width="112" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-28" value="&lt;div align=&quot;center&quot;&gt;Create Meeting&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;Assign&amp;nbsp; Participants&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;Schedule Meeting&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;Attach Meeting&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;strokeColor=#36393d;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="420" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-29" target="ostFqjo0AkNTW5q0AOqs-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-31" target="ostFqjo0AkNTW5q0AOqs-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="410" />
+              <mxPoint x="500" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-31" value="&lt;div align=&quot;left&quot;&gt;Meeting&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;call&lt;br&gt;&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;fontSize=10;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="370" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-36" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/font-awesome/1792/hand-pointer-o-128.png;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="380" width="38" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1" source="ostFqjo0AkNTW5q0AOqs-37" target="ostFqjo0AkNTW5q0AOqs-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ostFqjo0AkNTW5q0AOqs-37" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.user;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="420" width="47.5" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

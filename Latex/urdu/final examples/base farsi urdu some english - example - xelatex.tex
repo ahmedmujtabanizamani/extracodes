@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[bidi=default]{babel}
+\usepackage{xepersian}
+
+% must pecify font for persian text document
+\settextfont{Jameel Noori Nastaleeq}
+
+\babelprovide[import]{urdu}
+\babelprovide[import]{english}
+\babelfont[urdu]{rm}[Renderer=Harfbuzz]{Jameel Noori Nastaleeq}
+\babelfont[urdu]{sf}[Renderer=HarfBuzz]{Noto Sans Arabic}
+\babelfont[english]{rm}{Times New Roman}
+
+
+
+
+
+
+\begin{document}
+
+{\otherlanguage{urdu} \tableofcontents}
+
+
+
+\begin{otherlanguage}{english}
+\begin{flushleft}
+
+\LR{
+\section{test}
+Hello How are You.
+}
+\end{flushleft}
+\end{otherlanguage}
+
+\vspace{0.5in}
+
+
+\section{
+Application
+}
+
+محترم/محترمہ [استاد/مینجر کا نام],
+
+\vspace{1cm}
+\hspace{4cm}
+میں [آپ کا نام]، [آپ کی کلاس/محکمہ] کا طالب علم/ملازم ہوں۔ میں آپ کو یہ درخواست دینے کے لیے لکھ رہا ہوں کہ مجھے [چھٹی کی وجہ] کی وجہ سے [چھٹی کی تعداد] دن کی چھٹی درکار ہے۔
+
+\vspace{0.5cm}
+میری چھٹی کی تاریخیں [چھٹی کی شروع ہونے کی تاریخ] سے [چھٹی کی ختم ہونے کی تاریخ] تک ہیں۔ میں وعدہ کرتا ہوں کہ میں اپنی غیر موجودگی کے دوران اپنے کام/پڑھائی کا خیال رکھوں گا اور واپس آ کر تمام کام مکمل کر لوں گا۔
+\\
+آپ کی مہربانی ہوگی اگر آپ میری درخواست پر غور کریں گے۔
+
+\vspace{0.5cm}
+\center{
+شکریہ۔
+}
+
+\vspace{1cm}
+\hfill
+خیراندیش، [آپ کا نام]
+
+\hfill
+[تاریخ]
+
+\hfill
+[رابطہ نمبر]
+
+
+
+\end{document}

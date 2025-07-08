@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+
+\usepackage{polyglossia}
+%\usepackage{fontspec}
+
+\setmainlanguage{urdu} % the document is in urdu
+\setotherlanguage{english}   % with some bits in English
+ % the following line specifies Urdu font and its location
+%\setmainfont{Jameel Noori Nastaleeq}
+
+\newfontfamily\urdufont[Script=Arabic]{Jameel Noori Nastaleeq}
+\newfontfamily\urdufontsf[Script=Arabic]{Noto Sans Arabic}
+%\renewcommand{\familydefault}{\rmdefault}
+%set font for other language
+\newfontfamily\englishfont{Arial}
+
+
+\begin{document}
+\title{\textenglish{Introduction to Urdu Poetry}}
+\author{\textenglish{Roshan Dil}}
+\maketitle
+\tableofcontents
+
+
+\section{\textenglish{English Text}}
+\begin{otherlanguage}{english}
+A document mainly in English has Urdu words 
+(\texturdu{ جملے کے درمیان میں اردو الفاظ}) within a sentence.
+But  also has Urdu paragraphs like below,
+\end{otherlanguage}
+
+\section{\textenglish{Urdu Text}}
+
+اردو کے مشہور شعرا میں میرتقی میر، غالب،جوش ملیح ٓابادی، شکیل بدایونی،
+ اقبال اور فیض کا نام سر فہرست آتا ہے۔  اردو کے بارے میں اردو کا  ایک مشہور شعر
+\begin{center}
+اردو ہے جس کا نام ، ہمیں جانتے ہیں داغ \\
+سارے جہاں میں دھوم ہماری زباں کی ہے\\
+\hspace{6cm} (داغ دھلوی)
+\end{center}
+
+\begin{english}
+Returning  back to our writing in English.
+\end{english}
+
+\end{document}

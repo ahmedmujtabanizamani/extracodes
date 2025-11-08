@@ -30,3 +30,6 @@
 
 ### Disable app
 - `adb shell pm disable-user --user 0 <<com.package.name>>`
+
+### List Users
+- `adb shell pm list users`

@@ -10,10 +10,10 @@
 
 ### App install
 - `adb -e install path/to/app.apk`
-- `-d                        - directs command to the only connected USB device...`
-- `-e                        - directs command to the only running emulator...`
-- `-s <serial number>        ...`
-- `-p <product name or path> ...`
+- -d                        - directs command to the only connected USB device...
+- -e                        - directs command to the only running emulator...
+- -s <serial number>        ...
+- -p <product name or path> ...
 - The flag you decide to use has to come before the actual adb command:
 - `adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X install -r com.myAppPackage` // Install the given app on all connected devices.
 
@@ -24,3 +24,4 @@
 - `adb shell pm uninstall com.example.MyApp`
 - `adb shell pm clear [package]` // Deletes all data associated with a package.
 - `adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X uninstall com.myAppPackage` //Uninstall the given app from all connected devices
+- `adb shell pm uninstall -k --user 0 <<system.app>>` // uninstall system apps

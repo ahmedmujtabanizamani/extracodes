@@ -1,6 +1,6 @@
 ### Getting the name of the current activity via ADB
 - `adb shell "dumpsys activity activities | grep ResumedActivity"`
-### All Installed Packages
+### List Installed Packages
 - `adb shell "pm list packages"`
 - `adb shell pm list packages -s` // System apps
 - `adb shell pm list packages -3` // Third party apps or user installed apps
@@ -27,3 +27,6 @@
 - `adb shell pm clear [package]` // Deletes all data associated with a package.
 - `adb devices | tail -n +2 | cut -sf 1 | xargs -IX adb -s X uninstall com.myAppPackage` //Uninstall the given app from all connected devices
 - `adb shell pm uninstall -k --user 0 <<system.app>>` // uninstall system apps
+
+### Disable app
+- `adb shell pm disable-user --user 0 <<com.package.name>>`

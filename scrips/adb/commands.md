@@ -2,6 +2,8 @@
 - `adb shell "dumpsys activity activities | grep ResumedActivity"`
 ### All Installed Packages
 - `adb shell "pm list packages"`
+- `adb shell pm list packages -s` // System apps
+- `adb shell pm list packages -3` // Third party apps or user installed apps
 ### Uninstall Package
 - `adb uninstall <<package.name>>`
 ### Files

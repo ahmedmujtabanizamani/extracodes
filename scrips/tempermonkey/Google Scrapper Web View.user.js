@@ -18,6 +18,7 @@
         meta.setAttribute('content', 'width=device-width, initial-scale=1;user-scalable=no;user-scalable=0;');
         // Append the meta element to the head section of the document
     document.head.appendChild(meta);
+    document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.remove();
 
     let str = "";
 
@@ -118,7 +119,11 @@
         copybtn.innerText = "COPY CSV";
         copybtn.id = "copybtn";
         copybtn.style.cssText = "display:none; background: #0f0; color: #000; border: none; padding: 10px; cursor: pointer; font-weight: bold;";
-        copybtn.onclick = () => { document.querySelector('#progress-element').style.display = 'none'; navigator.clipboard.writeText(str); alert("Copied!"); };
+        copybtn.onclick = () => {
+                                 document.querySelector('#progress-element').style.display = 'none';
+                                 navigator.clipboard.writeText(str); alert("Copied!");
+                                 document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.remove();
+                                };
 
         container.appendChild(btn);
         container.appendChild(copybtn);

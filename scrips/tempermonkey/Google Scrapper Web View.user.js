@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Google Scrapper Web View
+// @name         Google Scraper - High Speed (No Images)
 // @namespace    http://tampermonkey.net/
-// @version      2026-01-25
-// @description  try to take over the world!
+// @version      5.0
+// @description  Blocks images and visual bloat to extract Website + FB faster
 // @author       You
 // @match        https://www.google.com/search*
 // @grant        none
@@ -52,7 +52,7 @@
         progress.style.display = "block";
         progress.innerHTML = "<b>Fast Extraction Active (Images Disabled)</b><br><hr>";
 
-        for (let i = 0; i < entries.length; i++) {
+        for (let i = 0, j = 0; i < entries.length; i++) {
             let x = entries[i];
             let nameEle = x.querySelector('[role="heading"], .OSrXXb, .EllIPb');
             let entryName = nameEle ? nameEle.innerText : "Unknown";
@@ -81,9 +81,12 @@
                 let fallback = x.querySelector('a[href^="http"]:not([href*="google.com"])');
                 if (fallback) websiteLink = cleanUrl(fallback.href);
             }
-
-            progress.innerHTML += `[${i+1}] ${entryName}<br>🔗 ${websiteLink}<br>📘 ${fbLink}<hr>`;
-            str += `${entryName} | ${websiteLink} | ${fbLink}\n`;
+            if(entryName.includes('My Ad Centre')){
+                continue;
+            }
+            j++;
+            progress.innerHTML += `[${j}] ${entryName}<br>🔗 ${websiteLink}<br>📘 ${fbLink}<hr>`;
+            str += `${j} ${entryName} | ${websiteLink} | ${fbLink}\n`;
             progress.scrollTop = progress.scrollHeight;
         }
 

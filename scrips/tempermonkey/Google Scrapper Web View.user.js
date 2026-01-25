@@ -10,6 +10,14 @@
 
 (function() {
     'use strict';
+    
+            // Create a new meta element
+        var meta = document.createElement('meta');
+        // Set the name and content attributes for the viewport meta tag
+        meta.setAttribute('name', 'viewport');
+        meta.setAttribute('content', 'width=device-width, initial-scale=1;user-scalable=no;user-scalable=0;');
+        // Append the meta element to the head section of the document
+    document.head.appendChild(meta);
 
     let str = "";
 

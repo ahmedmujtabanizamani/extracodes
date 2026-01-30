@@ -18,7 +18,7 @@
         meta.setAttribute('content', 'width=device-width, initial-scale=1;user-scalable=no;user-scalable=0;');
         // Append the meta element to the head section of the document
     document.head.appendChild(meta);
-    document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.remove();
+    document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.style.display = 'none';
 
     let str = "";
 
@@ -65,18 +65,43 @@
             let x = entries[i];
             let nameEle = x.querySelector('[role="heading"], .OSrXXb, .EllIPb');
             let entryName = nameEle ? nameEle.innerText : "Unknown";
+            let maxRetries = 0;
+            
+            if(entryName.includes('My Ad Centre') || entryName == "Unknown"){
+                continue;
+            }
 
             // Click entry to trigger background data fetch
-            if (nameEle) nameEle.click();
+            document.querySelector('g-sticky-content-container').remove();
+            nameEle.click();
             
             // Reduced sleep because images aren't loading, text loads faster
-            await sleep(800); 
+            await sleep(200); 
 
             let websiteLink = "NA";
             let fbLink = "NA";
+            let webBtn = null;
+            
+            let sidecontainer = document.querySelector('g-sticky-content-container');
+            if(!sidecontainer){
+                while(!sidecontainer && maxRetries <= 1200){
+                    sidecontainer = document.querySelector('g-sticky-content-container');
+                    await sleep(200);
+                    maxRetries += 200;
+                }
+                
+            }
+            
+            let allLinkss = sidecontainer.querySelectorAll('a[href^="http"]:not([href*="google.com"])');
+            for(let k = 0; k < allLinkss.length; k++){
+                let spanData = allLinkss[k].querySelector('span');
+                if( spanData && spanData.innerText == "Website")
+                    webBtn = allLinkss[k];
+                  
+            }
 
             // 1. Grab Website from the details panel
-            let webBtn = document.querySelector('a[aria-label*="Website"], a[data-footer-section-id="website"], a.ab_button[href^="http"]:not([href*="google.com"])');
+            //let webBtn = document.querySelector('a[aria-label*="Website"], a[data-footer-section-id="website"], a.ab_button[href^="http"]:not([href*="google.com"])');
             if (webBtn) websiteLink = cleanUrl(webBtn.href);
 
             // 2. Grab FB from details panel links
@@ -90,13 +115,12 @@
                 let fallback = x.querySelector('a[href^="http"]:not([href*="google.com"])');
                 if (fallback) websiteLink = cleanUrl(fallback.href);
             }
-            if(entryName.includes('My Ad Centre')){
-                continue;
-            }
+            
             j++;
             progress.innerHTML += `[${j}] ${entryName}<br>🔗 ${websiteLink}<br>📘 ${fbLink}<hr>`;
             str += `${j} ${entryName} | ${websiteLink} | ${fbLink}\n`;
             progress.scrollTop = progress.scrollHeight;
+            
         }
 
         document.querySelector('#copybtn').style.display = "block";
@@ -122,7 +146,7 @@
         copybtn.onclick = () => {
                                  document.querySelector('#progress-element').style.display = 'none';
                                  navigator.clipboard.writeText(str); alert("Copied!");
-                                 document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.remove();
+                                 document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.style.display = 'none';
                                 };
 
         container.appendChild(btn);

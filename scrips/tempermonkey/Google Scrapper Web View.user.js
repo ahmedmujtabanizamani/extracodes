@@ -10,13 +10,13 @@
 
 (function() {
     'use strict';
-    
-            // Create a new meta element
-        var meta = document.createElement('meta');
-        // Set the name and content attributes for the viewport meta tag
-        meta.setAttribute('name', 'viewport');
-        meta.setAttribute('content', 'width=device-width, initial-scale=1;user-scalable=no;user-scalable=0;');
-        // Append the meta element to the head section of the document
+
+    // Create a new meta element
+    var meta = document.createElement('meta');
+    // Set the name and content attributes for the viewport meta tag
+    meta.setAttribute('name', 'viewport');
+    meta.setAttribute('content', 'width=device-width, initial-scale=1;user-scalable=no;user-scalable=0;');
+    // Append the meta element to the head section of the document
     document.head.appendChild(meta);
     document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.style.display = 'none';
 
@@ -47,7 +47,9 @@
         if (url.includes('url?q=')) {
             try {
                 return decodeURIComponent(url.split('url?q=')[1].split('&')[0]);
-            } catch(e) { return url; }
+            } catch (e) {
+                return url;
+            }
         }
         return url;
     };
@@ -56,71 +58,76 @@
         str = "Name | Website | Facebook\n";
         // Select entries by data-cid (most stable selector)
         let entries = document.querySelectorAll('div[data-cid], .VkpSyc, .uMdZh');
-        
+
         const progress = document.querySelector('#progress-element');
         progress.style.display = "block";
         progress.innerHTML = "<b>Fast Extraction Active (Images Disabled)</b><br><hr>";
 
         for (let i = 0, j = 0; i < entries.length; i++) {
-            let x = entries[i];
-            let nameEle = x.querySelector('[role="heading"], .OSrXXb, .EllIPb');
-            let entryName = nameEle ? nameEle.innerText : "Unknown";
-            let maxRetries = 0;
-            
-            if(entryName.includes('My Ad Centre') || entryName == "Unknown"){
-                continue;
-            }
+            try {
+                let x = entries[i];
+                let nameEle = x.querySelector('[role="heading"], .OSrXXb, .EllIPb');
+                let entryName = nameEle ? nameEle.innerText : "Unknown";
+                let maxRetries = 0;
 
-            // Click entry to trigger background data fetch
-            document.querySelector('g-sticky-content-container').remove();
-            nameEle.click();
-            
-            // Reduced sleep because images aren't loading, text loads faster
-            await sleep(200); 
-
-            let websiteLink = "NA";
-            let fbLink = "NA";
-            let webBtn = null;
-            
-            let sidecontainer = document.querySelector('g-sticky-content-container');
-            if(!sidecontainer){
-                while(!sidecontainer && maxRetries <= 1200){
-                    sidecontainer = document.querySelector('g-sticky-content-container');
-                    await sleep(200);
-                    maxRetries += 200;
+                if (entryName.includes('My Ad Centre') || entryName == "Unknown") {
+                    continue;
                 }
-                
-            }
-            
-            let allLinkss = sidecontainer.querySelectorAll('a[href^="http"]:not([href*="google.com"])');
-            for(let k = 0; k < allLinkss.length; k++){
-                let spanData = allLinkss[k].querySelector('span');
-                if( spanData && spanData.innerText == "Website")
-                    webBtn = allLinkss[k];
-                  
+
+                // Click entry to trigger background data fetch
+                if (document.querySelector('g-sticky-content-container'))
+                    document.querySelector('g-sticky-content-container').remove();
+                nameEle.click();
+
+                // Reduced sleep because images aren't loading, text loads faster
+                await sleep(200);
+
+                let websiteLink = "NA";
+                let fbLink = "NA";
+                let webBtn = null;
+
+                let sidecontainer = document.querySelector('g-sticky-content-container');
+                if (!sidecontainer) {
+                    while (!sidecontainer && maxRetries <= 1200) {
+                        sidecontainer = document.querySelector('g-sticky-content-container');
+                        await sleep(200);
+                        maxRetries += 200;
+                    }
+
+                }
+
+                let allLinkss = sidecontainer.querySelectorAll('a[href^="http"]:not([href*="google.com"])');
+                for (let k = 0; k < allLinkss.length; k++) {
+                    let spanData = allLinkss[k].querySelector('span');
+                    if (spanData && spanData.innerText == "Website")
+                        webBtn = allLinkss[k];
+
+                }
+
+                // 1. Grab Website from the details panel
+                //let webBtn = document.querySelector('a[aria-label*="Website"], a[data-footer-section-id="website"], a.ab_button[href^="http"]:not([href*="google.com"])');
+                if (webBtn) websiteLink = cleanUrl(webBtn.href);
+
+                // 2. Grab FB from details panel links
+                let allLinks = document.querySelectorAll('a[href*="facebook.com"]');
+                if (allLinks.length > 0) {
+                    fbLink = cleanUrl(allLinks[allLinks.length - 1].href);
+                }
+
+                // Fallback for Website if panel failed
+                if (websiteLink === "NA") {
+                    let fallback = x.querySelector('a[href^="http"]:not([href*="google.com"])');
+                    if (fallback) websiteLink = cleanUrl(fallback.href);
+                }
+
+                j++;
+                progress.innerHTML += `[${j}] ${entryName}<br>🔗 ${websiteLink}<br>📘 ${fbLink}<hr>`;
+                str += `${j} ${entryName} | ${websiteLink} | ${fbLink}\n`;
+                progress.scrollTop = progress.scrollHeight;
+            } catch (e) {
+                alert(e);
             }
 
-            // 1. Grab Website from the details panel
-            //let webBtn = document.querySelector('a[aria-label*="Website"], a[data-footer-section-id="website"], a.ab_button[href^="http"]:not([href*="google.com"])');
-            if (webBtn) websiteLink = cleanUrl(webBtn.href);
-
-            // 2. Grab FB from details panel links
-            let allLinks = document.querySelectorAll('a[href*="facebook.com"]');
-            if (allLinks.length > 0) {
-                fbLink = cleanUrl(allLinks[allLinks.length - 1].href);
-            }
-
-            // Fallback for Website if panel failed
-            if (websiteLink === "NA") {
-                let fallback = x.querySelector('a[href^="http"]:not([href*="google.com"])');
-                if (fallback) websiteLink = cleanUrl(fallback.href);
-            }
-            
-            j++;
-            progress.innerHTML += `[${j}] ${entryName}<br>🔗 ${websiteLink}<br>📘 ${fbLink}<hr>`;
-            str += `${j} ${entryName} | ${websiteLink} | ${fbLink}\n`;
-            progress.scrollTop = progress.scrollHeight;
-            
         }
 
         document.querySelector('#copybtn').style.display = "block";
@@ -144,10 +151,11 @@
         copybtn.id = "copybtn";
         copybtn.style.cssText = "display:none; background: #0f0; color: #000; border: none; padding: 10px; cursor: pointer; font-weight: bold;";
         copybtn.onclick = () => {
-                                 document.querySelector('#progress-element').style.display = 'none';
-                                 navigator.clipboard.writeText(str); alert("Copied!");
-                                 document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.style.display = 'none';
-                                };
+            document.querySelector('#progress-element').style.display = 'none';
+            navigator.clipboard.writeText(str);
+            alert("Copied!");
+            document.querySelectorAll('div[aria-label=Close] span svg')[0].parentElement.parentElement.parentElement.style.display = 'none';
+        };
 
         container.appendChild(btn);
         container.appendChild(copybtn);
@@ -159,5 +167,6 @@
         document.body.appendChild(progressEle);
     };
 
-    if (document.readyState === 'complete') setupUI(); else window.addEventListener('load', setupUI);
+    if (document.readyState === 'complete') setupUI();
+    else window.addEventListener('load', setupUI);
 })();
